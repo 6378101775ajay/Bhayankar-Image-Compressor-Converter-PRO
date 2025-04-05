@@ -1,0 +1,248 @@
+
+  * {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #232526, #414345);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    letter-spacing: 1px;
+  }
+
+  input[type="file"],
+  input[type="number"],
+  select,
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  input[type="file"],
+  input[type="number"],
+  select {
+    background: #333;
+    color: #fff;
+    width: 250px;
+  }
+
+  button {
+    background: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background: #fff200;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #fff20080;
+  }
+
+  .preview {
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  img#previewImage {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: popIn 1s ease-in-out forwards;
+  }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  #downloadLink {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #00e676;
+    color: #000;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transform: scale(1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  #downloadLink:hover {
+    background: #69f0ae;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00e67680;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #options {
+    margin-top: 20px;
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Mobile View: One Column */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .box {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    h2 {
+      font-size: 22px;
+      padding: 10px;
+    }
+  
+    button, input, select {
+      font-size: 15px;
+    }
+  }
+  
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffea00;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: #2e2e2e;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.box h4 {
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+#imageInput,
+input[type="number"],
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: #444;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  background: #00e676;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #69f0ae;
+  transform: scale(1.03);
+}
+
+#previewImage {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+#downloadLink {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: none;
+}
+
+#downloadLink:hover {
+  background: #42a5f5;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
